@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  ros2:
+    volumes:
+      - ../src:/workspace/ros2_ws/src:cached
+
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    restart: "no"

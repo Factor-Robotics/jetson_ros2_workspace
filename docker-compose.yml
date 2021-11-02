@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  ros2:
+    image: nvidiajetson/l4t-ros2-foxy:r32.5
+    command: ros2 run demo_nodes_cpp talker
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - build:/workspace/ros2_ws/build
+      - install:/workspace/ros2_ws/install
+      - /workspace/ros2_ws/log
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    restart: "always"
+
+volumes:
+  build:
+  install:

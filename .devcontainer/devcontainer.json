@@ -1,0 +1,12 @@
+{
+	"dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
+	"service": "ros2",
+	"workspaceFolder": "/workspace/ros2_ws",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"ms-iot.vscode-ros",
+		"ms-vscode.cpptools-extension-pack",
+		"nvidia.nsight-vscode-edition",
+		"visualstudioexptteam.vscodeintellicode"
+	],
+}
