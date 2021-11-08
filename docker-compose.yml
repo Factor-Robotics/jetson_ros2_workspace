@@ -10,7 +10,7 @@ services:
     volumes:
       - build:/workspace/ros2_ws/build
       - install:/workspace/ros2_ws/install
-      - /workspace/ros2_ws/log
+      - /.ros
       - /tmp/.X11-unix:/tmp/.X11-unix
     restart: "always"
 

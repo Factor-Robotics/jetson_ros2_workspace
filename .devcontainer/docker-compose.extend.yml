@@ -3,7 +3,8 @@ version: '2'
 services:
   ros2:
     volumes:
-      - ../src:/workspace/ros2_ws/src:cached
+      - ./src:/workspace/ros2_ws/src
+      - ./log:/workspace/ros2_ws/log
 
     cap_add:
       - SYS_PTRACE
