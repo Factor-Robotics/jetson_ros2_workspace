@@ -5,6 +5,7 @@ services:
     volumes:
       - ./src:/workspace/ros2_ws/src
       - ./log:/workspace/ros2_ws/log
+      - ./build:/workspace/ros2_ws/build
 
     cap_add:
       - SYS_PTRACE

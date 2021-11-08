@@ -8,12 +8,10 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
     volumes:
-      - build:/workspace/ros2_ws/build
       - install:/workspace/ros2_ws/install
       - /.ros
       - /tmp/.X11-unix:/tmp/.X11-unix
     restart: "always"
 
 volumes:
-  build:
   install:
