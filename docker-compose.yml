@@ -3,7 +3,9 @@ version: '2'
 services:
   ros2:
     image: nvidiajetson/l4t-ros2-foxy:r32.5
-    command: ros2 run demo_nodes_cpp talker
+    command: bash -c "
+      if [ -f /workspace/ros2_ws/install/local_setup.bash ]; then source /workspace/ros2_ws/install/local_setup.bash; fi
+      && ros2 run demo_nodes_cpp talker"
     network_mode: "host"
     environment:
       - DISPLAY=${DISPLAY}
