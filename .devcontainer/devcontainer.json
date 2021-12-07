@@ -2,6 +2,7 @@
 	"dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
 	"service": "ros2",
 	"workspaceFolder": "/workspace/ros2_ws",
+	"overrideCommand": false,
 	"shutdownAction": "stopCompose",
 	"extensions": [
 		"ms-iot.vscode-ros",
