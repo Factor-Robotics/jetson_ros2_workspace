@@ -11,9 +11,11 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - install:/workspace/ros2_ws/install
-      - /.ros
+      - /root/.ros
       - /tmp/.X11-unix:/tmp/.X11-unix
+      # - /dev/bus/usb:/dev/bus/usb
     restart: "always"
+    # privileged: true
 
 volumes:
   install:
